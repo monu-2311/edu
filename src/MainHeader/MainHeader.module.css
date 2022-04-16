@@ -1,0 +1,22 @@
+.main-header{
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 96%;
+ height: 5rem;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ background-color: rgba(32, 16, 88, 0.87);
+ padding: 0 2rem;
+}
+
+.main-header h1{
+    color: white;
+    margin-left: 20px;
+}
+
+.sub-header{
+    display: flex;
+    align-items: center;
+}
