@@ -1,10 +1,7 @@
 import React from 'react';
 import  Box from '@mui/material/Box';
 import TextField  from '@mui/material/TextField';
-import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-import AddIcon from '@mui/icons-material/Add';
-import Button  from '@mui/material/Button';
 import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
 
@@ -21,9 +18,12 @@ const EditTask = (props) => {
         p: 4,
         
       };
+
+      //call the delete function in Taskboard
       const deletetask=()=>{
           props.onClick();
       }
+
   return (
     <Modal
         open={props.opens}
@@ -38,9 +38,48 @@ const EditTask = (props) => {
            <CloseOutlinedIcon onClick={()=> props.handlers()}/>
           </Box>
           <Box sx={{marginTop:3}}>
-          <TextField margin="normal" value={props.obj.name} id="username" label="New List" type="text" name="username" autoComplete="username" placeholder='New List' fullWidth  autoFocuss required/>
-          <TextField multiline row={5} value={props.obj.discription} margin="normal" id="discription" type="text" label="Discription" name="discription" placeholder='Enter Discription' autoComplete="discription" fullWidth autoFocuss required/>
-          <TextField margin="normal" value={props.obj.date} type="date" id="date"  name="date" autoComplete="discription" fullWidth autoFocuss required/>
+              
+          <TextField 
+            margin="normal" 
+            value={props.obj.name} 
+            id="username" 
+            label="New List" 
+            type="text" 
+            name="username" 
+            autoComplete="username" 
+            placeholder='New List' 
+            fullWidth  
+            autoFocuss 
+            required
+          />
+
+          <TextField 
+            multiline 
+            row={5} 
+            value={props.obj.discription} 
+            margin="normal" 
+            id="discription" 
+            type="text" 
+            label="Discription" 
+            name="discription" 
+            placeholder='Enter Discription' 
+            autoComplete="discription" 
+            fullWidth 
+            autoFocuss 
+            required
+          />
+
+          <TextField 
+            margin="normal" 
+            value={props.obj.date} 
+            type="date" 
+            id="date"  
+            name="date" 
+            autoComplete="discription" 
+            fullWidth 
+            autoFocuss 
+            required
+          />
           </Box>
         </Box>
       </Modal>

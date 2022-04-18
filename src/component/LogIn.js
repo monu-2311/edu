@@ -3,12 +3,10 @@ import FormControlLabel  from '@mui/material/FormControlLabel';
 import  Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import CheckBox  from '@mui/material/Checkbox';
 import Link  from '@mui/material/Link';
 import Button  from '@mui/material/Button';
-
-
 
 const LogIn = (props) => {
   const [user,setUsers] = useState([])  //Create user and set into the local storage
@@ -28,7 +26,7 @@ const LogIn = (props) => {
       localStorage.setItem('isLoggedIn',JSON.stringify(userList));
       /*End of Logic */
 
-      setUsers(userList); /* add the new user and previous user details into the localstorage */
+      setUsers(userList); 
       setLogin(false);
       setInvalidEmail(false);
       setInvalidPassword(false); 
